@@ -1,0 +1,1 @@
+json.extract! person, :id, :firstname, :lastname, :ascii, :binary, :zeros
