@@ -5,6 +5,7 @@ class PeopleController < ApplicationController
 
   def show
     @person = Person.all
+    render json: @person
   end
 
   def new
