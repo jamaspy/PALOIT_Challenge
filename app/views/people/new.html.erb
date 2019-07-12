@@ -1,0 +1,11 @@
+<h1>Create New Person</h1>
+
+<%= form_for @person do |f| %>
+                <%= f.label :firstname%>
+                <%= f.text_field :firstname%>
+
+                <%= f.label :lastname%>
+                <%= f.text_field :lastname%>
+                
+                <%= f.submit "Get Binary"%>
+<% end %>
