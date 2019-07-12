@@ -8,6 +8,7 @@ class PeopleController < ApplicationController
   end
 
   def new
+    @people = Person.all
     @person = Person.new
   end
 
@@ -15,10 +16,10 @@ class PeopleController < ApplicationController
     @person = Person.new (
       params.require(:person).permit(:firstname, :lastname)
     )
-    if @person.save
-      redirect_to people_url
-    else
-      render 'new'
-    end
+      if @person.save
+        redirect_to people_url
+      else
+        render 'new'
+      end
    end
 end
