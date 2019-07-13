@@ -1,24 +1,15 @@
-# README
+# Server For PALO IT Tech Challange 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Ruby Rails database to store first & last name, and run methods to get ASCII & Binary values as well as calculate the maximum number of consecutive 0's in the binary value.
 
-Things you may want to cover:
+This is currently deployed: https://paloitchallenge.herokuapp.com/
 
-* Ruby version
+Steps To Use Locally:
 
-* System dependencies
+1) clone or download `git clone https://github.com/jamaspy/PALOIT_Challenge`
+2) cd in to the directory `cd PALOIT_Challenge`
+3) run `bundle install`
+4) start the server `rails s`
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### You will need to change the URL in the accompanying ReactJS frontend to use this locally
+### Change the Fetch() & Axios URLs to: `localhost:3000/people.json`
