@@ -1,4 +1,5 @@
 class PeopleController < ApplicationController
+  skip_before_action :verify_authenticity_token
   def index
     @people = Person.all
     respond_to do |format| 
@@ -18,13 +19,15 @@ class PeopleController < ApplicationController
   end
 
   def create
-    @person = Person.new (
-      params.require(:person).permit(:firstname, :lastname)
-    )
-      if @person.save
-        redirect_to people_url
-      else
-        render 'new'
-      end
-   end
+  @person = Person.new
+  @person.firstname = params[:firstname]
+  @person.lastname = params[:lastname]
+  
+    if @person.save
+      redirect_to people_url
+    else
+      render 'new'
+    end
+ end
+   
 end
