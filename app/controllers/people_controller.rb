@@ -1,16 +1,12 @@
 class PeopleController < ApplicationController
   skip_before_action :verify_authenticity_token
+
   def index
     @people = Person.all
     respond_to do |format| 
       format.html # index.html.erb 
       format.json { render :json => @people, :methods => [:asciify, :binarify, :countZeros] } 
     end
-  end
-
-  def show
-    @person = Person.all
-    render json: @person
   end
 
   def new
