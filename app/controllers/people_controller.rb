@@ -3,7 +3,7 @@ class PeopleController < ApplicationController
     @people = Person.all
     respond_to do |format| 
       format.html # index.html.erb 
-      format.json { render :json => @people } 
+      format.json { render :json => @people, :methods => [:asciify, :binarify, :countZeros] } 
     end
   end
 
